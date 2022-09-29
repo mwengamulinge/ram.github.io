@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<head> <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine"> </head>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+	<title> Ram </title>
+
+	<script>
+		
+		</script>
+</head>
+<body>
+	<div class="main">
+		<div class="logo"><a href="index.html">RM</a></div>
+		<div class="name">
+			<a href="about.html" class="about" id="myBtn">About</a>
+			<a href="projects.html" class="projects" id="myBtn">Projects</a>
+		<h1>&nbsp Ram Mulinge</h1>
+		<h4>Front-End Web Developer</h4>
+		<button class="trigger" >Let's Chat</button>
+		</div>
+		<div class="modal">
+	
+			<div class="modal-content">
+	
+				<span class="close-button">&times;</span>
+	
+				<h1>Let's Chat</h1>
+	
+
+				<form>
+					<input type="text" placeholder="Name" class="msg_input" required>
+					<input type="mail" placeholder="Email" class="msg_input" required>
+					<textarea cols="2" rows="3" class="msg_text"></textarea>
+					<input type="submit" value="Send Message" class="msg_send">
+				</form>
+			</div>
+	
+		</div>
+		<div class="home_image">
+			<img src="Main_profile_picture.png" alt="Photo Loading...">
+		</div>
+	</div>
+</body>
+</html>
+<script>
+	const modal = document.querySelector(".modal");
+  const trigger = document.querySelector(".trigger");
+  const closeButton = document.querySelector(".close-button");
+
+  function toggleModal() {
+	  modal.classList.toggle("show-modal");
+  }
+
+  function windowOnClick(event) {
+	  if (event.target === modal) {
+		  toggleModal();
+	  }
+  }
+
+  trigger.addEventListener("click", toggleModal);
+  closeButton.addEventListener("click", toggleModal);
+  window.addEventListener("click", windowOnClick);
+  </script>
